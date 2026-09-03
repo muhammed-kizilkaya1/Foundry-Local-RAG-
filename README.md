@@ -1,5 +1,12 @@
+## 🙏 Teşekkür
 
-# 📚 Yerel RAG Asistanı — Çevrimdışı Belge Sorgulama
+Bu proje, Microsoft AI Summer Innovators Internship Program kapsamında geliştirilmiştir.
+Beni bu harika programa kabul eden, süreç boyunca destekleyen ve yönlendiren Barbaros Günay’a içten teşekkürlerimi sunarım. Programın sağladığı eğitim, kaynaklar ve ilham sayesinde bu projeyi hayata geçirme fırsatı buldum.
+
+
+
+
+# 📚 Local RAG Asistanı — Çevrimdışı
 
 Bu proje, **tamamen yerel** çalışan bir Soru-Cevap asistanıdır. Kendi belgelerinizi (ders notları, kılavuzlar, makaleler) yükleyip, onlar üzerinden doğal dilde sorular sorabilirsiniz. Tüm işlemler **internet bağlantısı olmadan**, kendi bilgisayarınızda gerçekleşir.
 
@@ -179,10 +186,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-🙏 Teşekkür
-
-Bu proje, Microsoft AI Summer Innovators Internship Program kapsamında geliştirilmiştir.
-Beni bu harika programa kabul eden, süreç boyunca destekleyen ve yönlendiren Barbaros Günay’a içten teşekkürlerimi sunarım. Programın sağladığı eğitim, kaynaklar ve ilham sayesinde bu projeyi hayata geçirme fırsatı buldum.
 
 Herhangi bir sorunuz veya öneriniz varsa lütfen iletişime geçin.
 İyi sorgulamalar! 🎓
