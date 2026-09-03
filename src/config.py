@@ -20,7 +20,7 @@ APP_TITLE = f" {SUBJECT_NAME} Asistanı"
 
 TOP_K = int(os.getenv("TOP_K", "4"))                          # Cevap üretirken kullanılacak parça sayısı
 DISPLAY_TOP_K = int(os.getenv("DISPLAY_TOP_K", "4"))          # Kenar çubuğunda gösterilecek parça sayısı
-RELEVANCE_THRESHOLD = float(os.getenv("RELEVANCE_THRESHOLD", "0.38")) 
+RELEVANCE_THRESHOLD = float(os.getenv("RELEVANCE_THRESHOLD", "0.45")) 
 
 CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "900"))
 CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "150"))
