@@ -27,7 +27,6 @@ if prompt := st.chat_input(f" {config.SUBJECT_NAME} sorusu sor..."):
 
     with st.chat_message("assistant"):
         with st.spinner("Aranıyor ve cevap oluşturuluyor..."):
-            # Tek bir retrieval çağrısı: hem cevap hem de gösterilecek parçalar buradan gelir
             response, results = answer_query(prompt, top_k=config.DISPLAY_TOP_K)
         st.markdown(response)
 
