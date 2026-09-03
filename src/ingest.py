@@ -48,10 +48,9 @@ def recursive_split_text(text, chunk_size=None, overlap=None, separators=("\n\n"
         if chunk:
             chunks.append(chunk)
 
-        # Güvenli ilerleme: overlap uygulandığında geriye gitmeyecek şekilde sınırla
         next_start = end - overlap
         if next_start <= start_idx:
-            next_start = end  # overlap'i bu adımda iptal et, ilerlemeyi garanti et
+            next_start = end
         start_idx = next_start
 
         if start_idx >= text_len - 10:
@@ -98,7 +97,6 @@ def main():
             chunk_index INTEGER
         )
     ''')
-    # Eski şemadan geliyorsa 'page' kolonunu ekle (yoksa hata vermez)
     try:
         cursor.execute("ALTER TABLE chunks ADD COLUMN page INTEGER")
     except sqlite3.OperationalError:
