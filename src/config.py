@@ -28,6 +28,6 @@ CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "150"))
 # ==============================
 # Veri Yolları
 # ==============================
-DATA_DIR = "data"
+DATA_DIR = "../data"
 DB_PATH = os.path.join(DATA_DIR, "vector_store.db")
 DOC_FOLDER = os.path.join(DATA_DIR, "documents") 
