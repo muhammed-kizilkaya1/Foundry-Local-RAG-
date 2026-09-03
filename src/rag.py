@@ -101,28 +101,22 @@ def answer_query(query, top_k=None):
 
     context = "\n\n---\n\n".join(r["text"] for r in results)
 
-    # 🔽 Sistem promptu daha keskin ve net
-    system_prompt = f"""Sen bir {config.SUBJECT_NAME} öğretmenisin ve TÜRKÇE cevap veriyorsun.
-Kullanıcının sorusunu SADECE ve SADECE aşağıda verilen bağlama (Context) göre cevapla.
-
-KURALLAR:
-1. Bağlamda cevap yoksa, kesinlikle tahmin etme, uydurma veya kendi bilgini kullanma.
-2. Bağlamda cevap yoksa, TEK BİR CÜMLE ile sadece "Bu bilgi notlarımda yok." de. Başka hiçbir şey söyleme.
-3. Bağlamda cevap varsa, onu aynen kullan, yorum yapma, ek bilgi ekleme.
+    # ⚡ HIZLANDIRILMIŞ SİSTEM PROMPTU (çok daha kısa ve öz)
+    system_prompt = f"""Sen bir Anayasa öğretmenisin. Sadece bağlamdaki bilgiyle cevap ver.
+Kurallar:
+- Cevap yoksa: "Bu bilgi notlarımda yok." de.
+- Varsa: aynen aktar, yorum yapma.
+- Çelişki varsa: 1982 Anayasası'ndakini esas al (dosya adında "1982" geçer).
 
 Bağlam:
 {context}
 
 Soru: {query}
 
-Cevap (sadece bağlamdan al, yoksa 'Bu bilgi notlarımda yok.' yaz):"""
+Cevap:"""
 
-    user_prompt = f"""Bağlam:
-{context}
-
-Soru: {query}
-
-Cevap (sadece bağlamdan al, yoksa 'Bu bilgi notlarımda yok.' yaz):"""
+    # ⚡ KULLANICI PROMPTU (sadece soruyu tekrar ediyor, context tekrar edilmiyor)
+    user_prompt = f"Soru: {query}"
 
     print("🧠 Cevap oluşturuluyor...")
     try:
@@ -136,9 +130,6 @@ Cevap (sadece bağlamdan al, yoksa 'Bu bilgi notlarımda yok.' yaz):"""
             temperature=0.0,
         )
         answer = response.choices[0].message.content
-        # Son bir filtre: Eğer cevap çok kısa veya anlamsızsa (isteğe bağlı)
-        # if len(answer.split()) < 3 and answer not in ["Bu bilgi notlarımda yok."]:
-        #     answer = "Bu bilgi notlarımda yok."
     except Exception as e:
         answer = (
             f"⚠️ Dil modeli sunucusuna ulaşılamadı ({config.API_BASE_URL}). "
