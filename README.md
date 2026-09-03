@@ -8,7 +8,7 @@ Beni bu harika programa kabul eden, süreç boyunca destekleyen ve yönlendiren 
 
 # 📚 Local RAG Asistanı — Çevrimdışı
 
-Bu proje, **tamamen yerel** çalışan bir Soru-Cevap asistanıdır. Kendi belgelerinizi (ders notları, kılavuzlar, makaleler) yükleyip, onlar üzerinden doğal dilde sorular sorabilirsiniz. Tüm işlemler **internet bağlantısı olmadan**, kendi bilgisayarınızda gerçekleşir.
+Bu proje, **tamamen yerel** çalışan bir Soru-Cevap asistanıdır. Kendi belgelerinizi (ders notları, kılavuzlar, makaleler) yükleyip, onlar üzerinden doğal dilde sorular sorabilirsiniz. Benim şuan kullandığım belgeler Türkiye Cumhuriyet'i Anayasası özelinde bir soru-cevap asistanı oluşturuyor. Tüm işlemler **internet bağlantısı olmadan**, kendi bilgisayarınızda gerçekleşir.
 
 Proje, **RAG (Retrieval-Augmented Generation)** desenini kullanır: sorunuzu önce belge parçalarıyla eşleştirir, ardından bu parçaları bir dil modeline vererek doğru ve kaynak gösteren cevaplar üretir.
 
@@ -167,7 +167,7 @@ Proje kök dizinine LICENSE adında bir dosya oluşturup aşağıdaki metni kopy
 text
 MIT License
 
-Copyright (c) 2026 [Buraya kendi adınızı veya kurum adınızı yazın]
+Copyright (c) 2026 Muhammed Kızılkaya
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
